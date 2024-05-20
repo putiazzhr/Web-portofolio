@@ -1,0 +1,171 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>puti Portofolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css" />
+
+</head>
+
+<body>
+    <nav>
+        <div class="header">
+            <div class="logo">Puti</div>
+            <div class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skill">Skill</a>
+                <a href="#Project">Project</a>
+                <a href="#Contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero" id="home">
+        <div class="main-hero">
+            <h1><i>Annisa Puti</i></h1>
+            <h2><i>Portofolio Website</i></h2>
+            <p>Junior Developer</p>
+        </div>
+        <div class="about" id="about">
+            <div class="img-hero">
+                <img src="../assets/puti.jpg" alt="">
+            </div>
+            <div class="desc-hero">
+                <h2>Hello,</h2>
+                <h1>I'm Annisa Puti Azzahra</h1>
+                <p>I am a beginner programmer. Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Delectus esse obcaecati ex excepturi optio quos veritatis
+                    soluta in vero, consequuntur cumque exercitationem aut doloremque quia molestiae
+                    explicabo reprehenderit?</p>
+                <div class="btn-box">
+                    <a href="#cv">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-skill">
+        <div class="header-skill">
+            <h1>My Skills</h1>
+        </div>
+        <div class="skill" id="skill">
+            <div class="card-skill">
+                <div class="desc-skill">
+                    <img src="../assets/HTML-removebg-preview.png">
+
+                </div>
+            </div>
+            <div class="card-skill">
+                <div class="desc-skill">
+                    <img src="../assets/images-removebg-preview.png">
+                </div>
+            </div>
+            <div class="card-skill">
+                <div class="desc-skill">
+                    <img src="../assets/java-removebg-preview.png">
+                </div>
+            </div>
+            <div class="card-skill">
+                <div class="desc-skill">
+                <img src="../assets/png-transparent-figma.png">
+                </div>
+            </div>
+            <div class="card-skill">
+                <div class="desc-skill">
+                    <img src="../assets/adobe_illustrator-removebg-preview.png">
+                </div>
+            </div>
+        </div>    
+    </div>    
+
+    <div class="container-project">
+        <div class="header-project">
+            <h1>My Project</h1>
+        </div>
+        <div class="Project" id="Project">
+            <div class="card-project">
+                <div class="desc-project">
+                    <img src="../assets/doraemon.jpg">
+                </div>
+            </div>
+            <div class="card-project">
+                <div class="desc-project">
+                    <img src="../assets/2.png">
+                </div>
+            </div>
+            <div class="card-project">
+                <div class="desc-project">
+                    <img src="../assets/icon sosmed.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-contact">
+        <div class="header-contact">
+            <h1>My Contacts</h1>
+        </div>
+        <div class="Contact" id="Contact">
+            <div class="card-contact">
+                <div class="desc-contact">
+                    <h2>Email</h2>
+                    <p>Annisaputiazzahra2@gmail.com</p>
+                </div>
+            </div>
+            <div class="card-contact">
+                <div class="desc-contact">
+                    <h2>Phone</h2>
+                    <p>+62 858-8080-2090</p>
+                </div>
+            </div>
+            <div class="card-contact">
+                <div class="desc-contact">
+                    <h2>Alamat</h2>
+                    <p>SMK Taruna Bhakti</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Puti Portofolio</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navbarLinks = document.querySelectorAll('.navbar a');
+    
+            navbarLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Hapus kelas 'active' dari semua link navbar
+                    navbarLinks.forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+    
+                    // Tambahkan kelas 'active' ke link yang diklik
+                    link.classList.add('active');
+    
+                    // Scroll ke bagian yang sesuai dengan href link yang diklik
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+    
+
+</body>
+
+</html>
